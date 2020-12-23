@@ -10,5 +10,6 @@ jobs:
   build:
     steps:
     - name: 'build'
+      runs-on: ubuntu-20.04
       uses: skbeh/mpv-win-build@master
 
