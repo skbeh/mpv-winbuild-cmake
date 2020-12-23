@@ -1,6 +1,0 @@
-name: mpv-win-build
-
-runs:
-  using: 'docker'
-  image: 'docker/Dockerfile'
-
