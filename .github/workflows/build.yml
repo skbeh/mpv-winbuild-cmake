@@ -1,0 +1,30 @@
+name: build
+
+on:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: docker://archlinux:base-devel
+
+      - name: initialization
+        run: |
+          pacman -Syuu
+          pacman -S --needed git gyp mercurial subversion ninja cmake meson ragel yasm nasm asciidoc enca gperf unzip p7zip gcc-multilib clang python-pip curl
+          pip3 install rst2pdf mako
+
+      - name: build
+        run: |
+          git clone --depth 1 https://github.com/skbeh/mpv-winbuild-cmake.git
+          cd mpv-winbuild-cmake
+          mkdir build64
+          cd build64
+          cmake -DTARGET_ARCH=x86_64-w64-mingw32 -G Ninja ..
+          ninja gcc
+          ninja mpv
+
+
