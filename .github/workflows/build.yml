@@ -7,7 +7,6 @@ on:
   workflow_dispatch:
 
 runs:
-  runs-on: ubuntu-20.04
   using: 'docker'
   image: 'docker/Dockerfile'
 
