@@ -11,15 +11,9 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: initialization
-      - uses: docker://archlinux:base-devel
-        run: |
-          pacman -Syuu
-          pacman -S --needed git gyp mercurial subversion ninja cmake meson ragel yasm nasm asciidoc enca gperf unzip p7zip gcc-multilib clang python-pip curl
-          pip3 install rst2pdf mako
-
-      - name: build
-      - uses: docker://archlinux:base-devel
+      - name: 'build'
+      - uses: 'docker'
+        image: 'docker/Dockerfile'
         run: |
           git clone --depth 1 https://github.com/skbeh/mpv-winbuild-cmake.git
           cd mpv-winbuild-cmake
