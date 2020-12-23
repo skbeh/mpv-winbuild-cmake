@@ -12,6 +12,6 @@ jobs:
 
     steps:
       - name: 'build'
-      - uses: 'docker'
+        uses: 'docker'
         image: 'docker/Dockerfile'
 
