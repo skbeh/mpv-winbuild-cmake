@@ -6,10 +6,6 @@ on:
       - master
   workflow_dispatch:
 
-runs:
-  using: 'docker'
-  image: 'docker/Dockerfile'
-
 jobs:
   build:
     steps:
