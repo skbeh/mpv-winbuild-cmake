@@ -1,7 +1,7 @@
 FROM archlinux:base-devel
 
-RUN useradd user
 WORKDIR /home/user
+RUN useradd user
 
 RUN pacman -Syuu \
   && pacman -S --needed git gyp mercurial subversion ninja cmake meson ragel yasm nasm asciidoc enca gperf unzip p7zip gcc-multilib clang python-pip curl \
