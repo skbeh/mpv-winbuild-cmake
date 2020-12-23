@@ -12,5 +12,6 @@ runs:
 
 jobs:
   build:
-    - name: build
+    - name: 'build'
+      run: ./build.sh
 
