@@ -8,4 +8,9 @@ on:
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker/Dockerfile'
+
+jobs:
+  build:
+    - name: build
+
