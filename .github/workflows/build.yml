@@ -10,5 +10,5 @@ jobs:
   build:
     steps:
     - name: 'build'
-      run: ./build.sh
+      uses: skbeh/mpv-win-build@master
 
