@@ -12,6 +12,7 @@ runs:
 
 jobs:
   build:
+    steps:
     - name: 'build'
       run: ./build.sh
 
