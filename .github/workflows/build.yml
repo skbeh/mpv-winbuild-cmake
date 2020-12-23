@@ -10,6 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-    - name: 'build mpv'
+    - name: 'build'
       uses: skbeh/mpv-winbuild-action@v0.3
 
