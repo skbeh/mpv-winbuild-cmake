@@ -1,5 +1,5 @@
 if(${TARGET_CPU} MATCHES "x86_64")
-    set(gcc_arch "x86-64")
+    set(gcc_arch "x86-64-v3")
     set(exception "--enable-seh-exceptions")
 else()
     set(gcc_arch "i686")
@@ -13,8 +13,8 @@ ExternalProject_Add(gcc-base
     STAMP_DIR gcc-prefix/src/gcc-stamp
     SOURCE_DIR gcc-prefix/src/gcc
     BINARY_DIR gcc-prefix/src/gcc-build
-    URL ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/snapshots/10-20201219/gcc-10-20201219.tar.xz
-    URL_HASH SHA512=b045c9a475bc43cb920eb38fdf50cb80df2defd403b0a5c5ca4a6fd545192278ddba181b4e2aa7750a3d88321aec7304c1945079acc8753178de6b2b33809d24
+    URL https://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/snapshots/11-20201220/gcc-11-20201220.tar.xz
+    URL_HASH SHA512=9079a6fe4d5995628296d171f2c15d783a6ca8c1758f9302e761a3cec729bd1ffc49743557002292154eed5ef8bea70e98884134a79f69d3298aee4c61e3ea68
     CONFIGURE_COMMAND <SOURCE_DIR>/configure
         --target=${TARGET_ARCH}
         --prefix=${CMAKE_INSTALL_PREFIX}
