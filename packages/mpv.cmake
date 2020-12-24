@@ -14,14 +14,11 @@ ExternalProject_Add(mpv
         luajit
         rubberband
         uchardet
-        openal-soft
-        mujs
         vulkan
         shaderc
         libplacebo
         spirv-cross
         vapoursynth
-        libsdl2
     GIT_REPOSITORY https://github.com/mpv-player/mpv.git
     UPDATE_COMMAND ""
     CONFIGURE_COMMAND ${EXEC}
@@ -30,19 +27,19 @@ ExternalProject_Add(mpv
         DEST_OS=win32
         <SOURCE_DIR>/waf configure
         --enable-static-build
-        --enable-pdf-build
+        --disable-pdf-build
         --disable-manpage-build
         --enable-libmpv-shared
         --enable-lua
-        --enable-javascript
-        --enable-sdl2
-        --enable-libarchive
+        --disable-javascript
+        --disable-sdl2
+        --disable-libarchive
         --enable-libbluray
         --enable-dvdnav
         --enable-uchardet
         --enable-rubberband
         --enable-lcms2
-        --enable-openal
+        --disable-openal
         --enable-spirv-cross
         --enable-vulkan
         --enable-vapoursynth

@@ -7,7 +7,6 @@ ExternalProject_Add(ffmpeg
         gmp
         lame
         libressl
-        libssh
         libass
         libbluray
         libmodplug
@@ -71,9 +70,7 @@ ExternalProject_Add(ffmpeg
         --enable-libtls
         --enable-libxml2
         --enable-libmysofa
-        --enable-libssh
         --enable-libmfx
-        --enable-cuda
         --enable-cuvid
         --enable-nvdec
         --enable-nvenc
