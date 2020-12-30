@@ -56,3 +56,6 @@ endif()
 
 add_subdirectory(toolchain)
 add_subdirectory(packages)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
