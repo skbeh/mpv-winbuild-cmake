@@ -1,6 +1,5 @@
 ExternalProject_Add(mpv
     DEPENDS
-        angle-headers
         ffmpeg
         fribidi
         lcms2
@@ -43,6 +42,7 @@ ExternalProject_Add(mpv
         --enable-spirv-cross
         --enable-vulkan
         --enable-vapoursynth
+	--disable-angle
         --prefix=${MINGW_INSTALL_PREFIX}
     BUILD_COMMAND ${EXEC} <SOURCE_DIR>/waf
     INSTALL_COMMAND ""
